@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteBank - economy bot</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="dark-theme">
+    <div id="loading-screen">
+        <div class="loading-text">
+            Loading<span class="dots"></span>
+        </div>
+    </div>
+
+    <!-- Server list (far left) -->
+    <div class="server-list">
+        <div class="server-icon active">
+            <img src="https://dankmemer.lol/img/memer.webp" alt="ByteBank">
+        </div>
+        <div class="server-divider"></div>
+    </div>
+
+    <!-- Channel list -->
+    <div class="channel-list">
+        <div class="server-header">
+            <h1>ByteBank</h1>
+        </div>
+        
+        <div class="channel-category">
+            <div class="category-header">
+                <span class="category-arrow">▼</span>
+                INFORMATION
+            </div>
+            <div class="channel-item" data-channel="welcome">
+                <span class="channel-hash">#</span>welcome
+            </div>
+            <div class="channel-item" data-channel="rules">
+                <span class="channel-hash">#</span>rules
+            </div>
+        </div>
+
+        <div class="channel-category">
+            <div class="category-header">
+                <span class="category-arrow">▼</span>
+                GENERAL
+            </div>
+            <div class="channel-item active" data-channel="general">
+                <span class="channel-hash">#</span>general
+            </div>
+            <div class="channel-item" data-channel="commands">
+                <span class="channel-hash">#</span>commands
+            </div>
+            <div class="channel-item" data-channel="help">
+                <span class="channel-hash">#</span>help
+            </div>
+        </div>
+    </div>
+
+    <!-- Main chat area -->
+    <div id="chat-container">
+        <div id="chat-header">
+            <div class="header-left">
+                <span class="channel-hash">#</span>
+                <span class="header-channel-name">general</span>
+            </div>
+            <div class="header-divider"></div>
+            <div class="header-description">Welcome to ByteBank! Use /help to get started.</div>
+        </div>
+        
+        <div id="chat-log"></div>
+        
+        <div id="input-area">
+            <div id="command-suggestions"></div>
+            <div class="input-controls">
+                <textarea id="chat-input" placeholder="Send a message or use / for commands"></textarea>
+                <button id="send-button">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Members list (right side) -->
+    <div class="members-list">
+        <div class="members-header">ONLINE — 1</div>
+        <div class="member-item">
+            <img src="https://dankmemer.lol/img/memer.webp" class="member-avatar">
+            <span class="member-name">ByteBot</span>
+            <span class="member-status">Bot</span>
+        </div>
+    </div>
+
+    <script src="./script.js" type="module"></script>
+</body>
+</html>
